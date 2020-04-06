@@ -1,3 +1,14 @@
 body {
-    background-color: aqua;
+
+}
+
+.jumbotron {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    padding: 30px;
+    background-image: linear-gradient(to top, white, 30%,#0052cc );
+    font-weight: bolder;
+    color: white;
+    border-bottom: 5px solid gray ;
+    
 }
