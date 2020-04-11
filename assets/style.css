@@ -1,6 +1,4 @@
-body {
-    
-}
+
 
 .jumbotron {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -13,13 +11,11 @@ body {
     
 }
 
-.row {
-    margin-bottom: 0;
-}
+
 
 .leftSide {
-    border: 2px solid lightgray;
-    
+    border: 2px solid #0052cc;
+    background-color: white;
     height: 300px;
     width: 250px;
     margin-left: 20px;
@@ -31,54 +27,56 @@ h6 {
     color: gray;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* Search Button ref:https://codepen.io/huange/pen/rbqsD */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans); */
 
 body{
-  background: #f2f2f2;
-  font-family: 'Open Sans', sans-serif;
+background: #f2f2f2;
+font-family: 'Open Sans', sans-serif;
 }
 
 .search {
-  width: 100%;
-  position: relative;
-  display: flex;
+    width: 100%;
+    position: relative;
+    display: flex;
 }
 
-.searchTerm {
-  width: 100%;
-  border: 3px solid #00B4CC;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 0 0 5px;
-  outline: none;
-  color: #9DBFAF;
+.jumbotron >.row >.leftSide > .wrap > .search > input[type=text].searchTerm {
+    width: 100%;
+    border: 3px solid #0052cc !important;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #0052cc;
 }
 
 .searchTerm:focus{
-  color: #00B4CC;
+    color: #0052cc;
 }
 
 .searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #00B4CC;
-  background: #00B4CC;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 20px;
+    width: 40px;
+    height: 36px;
+    border: 1px solid #0052cc;
+    background: #0052cc;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 20px;
 }
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
-  width: 50%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+    width: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
+/* End of Search Button CSS*/
 
 
 
@@ -86,13 +84,12 @@ body{
 
 
 .rightSide {
-    background-color: lightseagreen;
-    height: 200px;
-    width: 600px;
-    align-self: flex-end;
+    background-color: white;
+    height: 250px;
+    width: 400px;
     margin-left: 20px;
-    float: right;
-
+    margin-top: 20px;
+    border: 2px solid #0052cc;
 }
 
 .dayforcast {
@@ -109,7 +106,9 @@ footer {
     color: white;
     font-weight: bold;
     border-bottom: 2px solid black;
-    padding-top: 40px;
+    margin-top: 40px;
+    padding-top: 25px;
+    
     
 }
 
