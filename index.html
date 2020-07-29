@@ -1,135 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
-    <!--Bootsrap CSS Stylsheet-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" 
-        crossorigin="anonymous">
-    <!--Link to Font Awesome for icons-->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <!--Animate stylesheet so I can attempt animation to my functions-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <!--Materialize stylesheet-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/style.css">
-</head>
-<body>
-    <Header>
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-                <h2 class="display-5 h1-txt ml-1 animated fadeIn">
-                    Weather Dashboard <i class="fas fa-cloud"></i>
-                </h2>
+    </head>
+
+    <body>
+    <header class="container-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard</h1>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+        <aside class="col-lg-3 bg-light">
+            <h5 class="mt-1">Search for a City:</h5>
+            <div class="form-inline form-group">
+            <input class="form-control" type="text" id="search-value" />
+            <button class="btn btn-primary" id="search-button"> <i class="fa fa-search"></i> </button>
             </div>
-        </Header>
-        
-        <div class="jumbotron-fluid col-12">
-            <div class="row">
-                <!--Search Button-->
-                <div class="col-4 leftSide">
-                    <h6>Search for a City:</h6>
-                    <div class="wrap">
-                        <div class="search">
-                            <input type="text" class="searchTerm" placeholder="Salt Lake City">
-                            <button type="submit" class="searchButton">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Display Current Day conditions-->
-                <div class="col-6 rightSide">
-                    <div id=searth-results></div>
-                </div>
-            </div>
-            
-            <!--Start of 5 day Forcast-->
-            <div class="row r2 justify-content-between">
 
-                <h4 class="col-12">5 Day Forcast:</h4>
-                <!--Day 1 Forcast-->
-                <div class="col-md-2";>
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title dayOne">Hello</h5>
-                                <p class="card-text iconOne">World</p>
-                                <p class="card-text tempOne">Whats</p>
-                                <p class="card-text humOne">Up</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Day 2 Forcast-->
-                <div class="col-md-2";>
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title dayOne"></h5>
-                                <p class="card-text iconOne"></p>
-                                <p class="card-text tempOne"></p>
-                                <p class="card-text humOne"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Day 3 Forcast-->
-                <div class="col-md-2";>
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title dayOne"></h5>
-                                <p class="card-text iconOne"></p>
-                                <p class="card-text tempOne"></p>
-                                <p class="card-text humOne"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Day 4 Forcast-->
-                <div class="col-md-2";>
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title dayOne"></h5>
-                                <p class="card-text iconOne"></p>
-                                <p class="card-text tempOne"></p>
-                                <p class="card-text humOne"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!--Day 5 Forcast-->
-                <div class="col-md-2";>
-                    <div>
-                        <div class="card">
-                            <div class="card-body">
-                                <h5 class="card-title dayOne"></h5>
-                                <p class="card-text iconOne"></p>
-                                <p class="card-text tempOne"></p>
-                                <p class="card-text humOne"></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <ul class="list-group history"></ul>
+        </aside>
 
-            </div>   
+        <div class="col-lg-9">
+            <div id="today" class="mt-3"></div>
+            <div id="forecast" class="mt-3"></div>
         </div>
-        
         </div>
-        
-        <footer>
-            David Weather
-        </footer>
-
     </div>
-    
 
-    
-</body>
-</html>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="assets/script.js"></script>
+    </body>
+
+    </html>
